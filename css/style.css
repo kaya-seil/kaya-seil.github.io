@@ -2326,7 +2326,7 @@ form label.error {
 }
 
 .nav-bar-icon a {
-    color: #FFFFFB;
+    color: #503830;
     display: block;
     font-size: 17px;
     padding: 19px 0;
@@ -2378,7 +2378,7 @@ header.header-dark .nav-bar-icon>span::after,
 header.header-dark.header-prepare .nav-bar-icon>span,
 header.header-dark.header-prepare .nav-bar-icon>span:before,
 header.header-dark.header-prepare .nav-bar-icon>span::after {
-    background-color: #FFFFFB;
+    background-color: #503830;
 }
 
 header.header-light .nav-bar-icon>span,
@@ -2837,7 +2837,7 @@ header.header-prepare .nav-bar-icon>span::after {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    font-size: 100px;
+    font-size: 12vmin;
 }
 
 .intro-media-wraper {
@@ -4359,7 +4359,7 @@ form .error {
     font-size: 18px;
 }
 
-span {
+.intro span {
     position: absolute;
     top: 90%;
     left: 50%;
@@ -4371,7 +4371,7 @@ span {
     box-sizing: border-box;
 }
 
-span::before {
+.intro span::before {
     position: absolute;
     top: 15px;
     left: 50%;
