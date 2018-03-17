@@ -4388,14 +4388,14 @@ span::before {
 
 @-webkit-keyframes sdb {
     0% {
-        -webkit-transform: translate(0, 0);
+        -webkit-transform: translate(0, 20px);
         opacity: 0;
     }
     40% {
         opacity: 1;
     }
     80% {
-        -webkit-transform: translate(0, 20px);
+        -webkit-transform: translate(0, 0);
         opacity: 0;
     }
     100% {
@@ -4405,14 +4405,14 @@ span::before {
 
 @keyframes sdb {
     0% {
-        transform: translate(0, 0);
+        transform: translate(0, 20px);
         opacity: 0;
     }
     40% {
         opacity: 1;
     }
     80% {
-        transform: translate(0, 20px);
+        transform: translate(0, 0);
         opacity: 0;
     }
     100% {
