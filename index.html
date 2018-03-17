@@ -1,538 +1,483 @@
 <!DOCTYPE html>
-<html lang="en">
+
+<html lang="jp">
 
 <head>
+  <meta charset="utf-8" />
+  <title>Apollo - Multiprapose Onepage Template</title>
+  <meta name="description" content="" />
+  <meta name="author" content="nileforest">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
 
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="">
-  <meta name="author" content="">
+  <script language="javascript" type="text/javascript" src="libraries/p5.min.js"></script>
+  <script language="javascript" src="libraries/p5.dom.min.js"></script>
+  <script language="javascript" src="libraries/p5.sound.min.js"></script>
 
-  <title>Portfolio</title>
-  <link rel="shortcut icon" href="img/icon.png">
+  <link href="https://fonts.googleapis.com/css?family=Josefin+Sans" rel="stylesheet">
 
-  <!-- Bootstrap Core CSS -->
-  <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="shortcut icon" type="image/x-icon" href="img/logos/favicon.ico" />
+  <link rel="icon" type="image/png" href="img/logos/favicon.ico" />
+  <link rel="apple-touch-icon" href="img/logos/logo.png" />
 
-  <!-- Theme CSS -->
-  <link href="css/freelancer.min.css" rel="stylesheet">
-
-  <!-- Custom Fonts -->
-  <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
-  <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
-  <link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css">
-
+  <link href="css/style.css" rel="stylesheet" type="text/css" />
+  <link href="css/bootstrap.css" rel="stylesheet" type="text/css" />
+  <link href="css/plugins/animate.css" rel="stylesheet" type="text/css" />
 </head>
 
-<body id="page-top" class="index">
-  <div id="skipnav"><a href="#maincontent">Skip to main content</a></div>
+<body class="wow-animate">
 
-  <!-- Navigation -->
-  <nav id="mainNav" class="navbar navbar-default navbar-fixed-top navbar-custom">
-    <div class="container">
-      <!-- Brand and toggle get grouped for better mobile display -->
-      <div class="navbar-header page-scroll">
-        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-                    <span class="sr-only">Toggle navigation</span> Menu <i class="fa fa-bars"></i>
-                </button>
-        <a class="navbar-brand" href="#page-top"><i class="fa fa-user-circle-o" aria-hidden="true"></i> Yuki Kayashima</a>
+  <section id="preloader">
+    <div class="site-spinner"></div>
+  </section>
+
+  <div id="page-wraper">
+
+    <header id="header" class="header">
+      <div class="header-inner">
+
+        <div class="logo">
+          <a href="index.html">
+            <img class="logo-light" src="img/logos/logo.png" alt="" />
+            <img class="logo-dark" src="img/logos/logo.png" alt="" />
+          </a>
+        </div>
+
+        <div class="nav-mobile nav-bar-icon">
+          <span></span>
+        </div>
+
+        <div class="nav-menu singlepage-nav">
+          <ul class="nav-menu-inner">
+            <li>
+              <a class="current" href="#about">about</a>
+            </li>
+            <li>
+              <a href="#work">work</a>
+            </li>
+            <li>
+              <a href="#experience">experience</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </header>
+
+    <section id="intro" class="intro">
+      <p class="top-title">Yuki Kayashima
+      </p>
+      <span></span>
+
+    </section>
+
+    <section id="about" class="section-padding">
+      <div class="container text-center">
+        <h2 class="mb-60">About Me</h2>
+      </div>
+      <div class="container">
+        <div class="row">
+          <div class="col-md-4 mb-sm-30">
+            <p class="lead">茅島 佑樹
+              <br>1997年生まれ。
+              <br>2015年4月 多摩大学 経営情報学部 経営情報学科に入学。大学ではPOSデータを用いたデータ分析をテーマとするゼミに所属。</p>
+          </div>
+          <div class="col-md-4 mb-sm-30">
+            <p class="lead">2015年5月 ライフイズテック株式会社にてAndroidアプリケーションの開発を中高生に教え始める。2016年10月 同社のサービス開発インターンにて
+              <a href="https://www.technologia-schoolofmagic.jp/">テクノロジア魔法学校</a>の教材開発を始める。</p>
+          </div>
+          <div class="col-md-4 mb-sm-30">
+            <p class="lead">2016年3月 ウィープラス株式会社にてインターンを始める。約1年間ウィンドウの制作や、展示物の制作等に関わる。 2016年6月 学生団体適十塾に参加。学生団体総選挙にて準優勝を受賞する。代表を務める。
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <hr />
+
+    <section id="work" class="section-padding">
+      <div class="container text-center">
+        <h2 class="mb-60">Work</h2>
       </div>
 
-      <!-- Collect the nav links, forms, and other content for toggling -->
-      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-        <ul class="nav navbar-nav navbar-right">
-          <li class="hidden">
-            <a href="#page-top"></a>
+      <div class="container">
+        <ul class="portfolio-filter categories-filter">
+          <li>
+            <a data-filter="*" class="categories active">all</a>
           </li>
-          <li class="page-scroll">
-            <a href="#portfolio">Portfolio</a>
+          <li>
+            <a data-filter=".internship" class="categories">internship</a>
           </li>
-          <li class="page-scroll">
-            <a href="#about">About</a>
+          <li>
+            <a data-filter=".hackathon" class="categories">hackathon</a>
           </li>
-          <li class="page-scroll">
-            <a href="#reasons">Experience</a>
+          <li>
+            <a data-filter=".branding" class="categories">branding</a>
+          </li>
+          <li>
+            <a data-filter=".released-app" class="categories">released app</a>
           </li>
         </ul>
-      </div>
-      <!-- /.navbar-collapse -->
-    </div>
-    <!-- /.container-fluid -->
-  </nav>
 
-  <!-- Header -->
-  <header>
-    <div class="container" id="maincontent" tabindex="-1">
-      <div class="row">
-        <div class="col-lg-12">
-          <img class="img-responsive" src="img/profile.png" alt="">
-          <div class="intro-text">
-            <h1 class="name">Yuki Kayashima</h1>
-            <hr class="star-light">
-            <span class="skills">Web Developer - Application Developer - Marketer</span>
-          </div>
-        </div>
-      </div>
-    </div>
-  </header>
+        <div class="rows portfolio-grid gallery-popup">
 
-  <!-- Portfolio Grid Section -->
-  <section id="portfolio">
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-12 text-center">
-          <h2>Portfolio</h2>
-          <hr class="star-primary">
-        </div>
-      </div>
-      <div class="row">
-        <!-- gifto -->
-        <div class="col-sm-4 portfolio-item">
-          <a href="#portfolioModal1" class="portfolio-link" data-toggle="modal">
-            <div class="caption">
-              <div class="caption-content">
-                <i class="fa fa-search-plus fa-3x"></i>
-              </div>
-            </div>
-            <img src="img/portfolio/gifto.jpg" class="img-responsive" alt="gifto">
-          </a>
-        </div>
+          <div class="portfolio-item internship">
+            <div class="portfolio-box">
+              <a class="porfolio-popup gallery-popup-link" href="img/portfolio/large/disney_large.jpg" title="">
 
-        <!-- fujiwara -->
-        <div class="col-sm-4 portfolio-item">
-          <a href="#portfolioModal2" class="portfolio-link" data-toggle="modal">
-            <div class="caption">
-              <div class="caption-content">
-                <i class="fa fa-search-plus fa-3x"></i>
-              </div>
-            </div>
-            <img src="img/portfolio/fujiwara.png" class="img-responsive" alt="fujiwara">
-          </a>
-        </div>
-
-        <!-- addition -->
-        <div class="col-sm-4 portfolio-item">
-          <a href="#portfolioModal3" class="portfolio-link" data-toggle="modal">
-            <div class="caption">
-              <div class="caption-content">
-                <i class="fa fa-search-plus fa-3x"></i>
-              </div>
-            </div>
-            <img src="img/portfolio/addition.png" class="img-responsive" alt="addition">
-          </a>
-        </div>
-        </div>
-
-        <div class="row">
-        <!-- second -->
-        <div class="col-sm-4 portfolio-item">
-          <a href="#portfolioModal4" class="portfolio-link" data-toggle="modal">
-            <div class="caption">
-              <div class="caption-content">
-                <i class="fa fa-search-plus fa-3x"></i>
-              </div>
-            </div>
-            <img src="img/portfolio/second.png" class="img-responsive" alt="second">
-          </a>
-        </div>
-
-        <!-- Xmas -->
-        <div class="col-sm-4 portfolio-item">
-          <a href="#portfolioModal5" class="portfolio-link" data-toggle="modal">
-            <div class="caption">
-              <div class="caption-content">
-                <i class="fa fa-search-plus fa-3x"></i>
-              </div>
-            </div>
-            <img src="img/portfolio/xmas01.jpeg" class="img-responsive" alt="Xmas">
-          </a>
-        </div>
-
-        <!-- pixiv -->
-        <div class="col-sm-4 portfolio-item">
-          <a href="#portfolioModal6" class="portfolio-link" data-toggle="modal">
-            <div class="caption">
-              <div class="caption-content">
-                <i class="fa fa-search-plus fa-3x"></i>
-              </div>
-            </div>
-            <img src="img/portfolio/pixiv01.jpg" class="img-responsive" alt="Pixiv">
-          </a>
-        </div>
-        </div>
-
-        <div class="row">
-        <!-- ami tumi -->
-        <div class="col-sm-4 portfolio-item">
-          <a href="#portfolioModal7" class="portfolio-link" data-toggle="modal">
-            <div class="caption">
-              <div class="caption-content">
-                <i class="fa fa-search-plus fa-3x"></i>
-              </div>
-            </div>
-            <img src="img/portfolio/amitumi.png" class="img-responsive" alt="amitumi">
-          </a>
-        </div>
-
-        <!-- ami tumi 秩父 -->
-        <div class="col-sm-4 portfolio-item">
-          <a href="#portfolioModal8" class="portfolio-link" data-toggle="modal">
-            <div class="caption">
-              <div class="caption-content">
-                <i class="fa fa-search-plus fa-3x"></i>
-              </div>
-            </div>
-            <img src="img/portfolio/amitumi_chichibu.jpg" class="img-responsive" alt="amitumi_chichibu">
-          </a>
-        </div>
-
-        <!-- クックパッド meet -->
-        <div class="col-sm-4 portfolio-item">
-          <a href="#portfolioModal9" class="portfolio-link" data-toggle="modal">
-            <div class="caption">
-              <div class="caption-content">
-                <i class="fa fa-search-plus fa-3x"></i>
-              </div>
-            </div>
-            <img src="img/portfolio/meet01.png" class="img-responsive" alt="meet">
-          </a>
-        </div>
-    </div>
-  </section>
-
-  <!-- About Section -->
-  <section class="success" id="about">
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-12 text-center">
-          <h2>About</h2>
-          <hr class="star-light">
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-lg-4 col-lg-offset-2">
-          <p>多摩大学経営情報学部経営情報学科3年の茅島佑樹です。<br>大学では主にマーケティングにおけるITの活用法について学んでおります。<br><br>普段はライフイズテック株式会社にてAndroidアプリケーションを中高生に教えるバイトを行いつつ、同社のMozer開発インターンにてWebサイト開発の教材を作っています。</p>
-        </div>
-        <div class="col-lg-4">
-          <p>適十塾という学生団体の代表も勤めています。<br>そこでは、全体のプロジェクトのまとめと進行をしながら、webサイトやチラシや商品のデザインを行なっております。</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section id="reasons">
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-12 text-center">
-          <h2>Experience</h2>
-          <hr class="star-primary">
-        </div>
-      </div>
-
-      <div class="row">
-        <div class="text-center">
-          <br>
-          <br>
-          <h3>インターンシップ, アルバイト経験</h3>
-          <br>
-          <p>ライフイズテック株式会社にてAndroidメンターとしてアルバイト 2015/7 - 2017/9 (現在)</p>
-          <p>ウィープラス株式会社にてインターン 2016/3 - 2017/5</p>
-          <p>ライフイズテック株式会社にてMozer開発インターン 2016/10 - 2017/9 (現在)</p>
-          <p>クックパッド株式会社にてサービス開発インターン 2017/9</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Footer -->
-  <footer class="text-center">
-    <div class="footer-above">
-      <div class="container">
-        <div class="row">
-          <div class="footer-col">
-            <h3>My SNS</h3>
-            <ul class="list-inline">
-              <li>
-                <a href="https://www.facebook.com/y.kyashima" class="btn-social btn-outline" target="_blank"><span class="sr-only">Facebook</span><i class="fa fa-fw fa-facebook"></i></a>
-              </li>
-              <li>
-                <a href="https://github.com/kaya5091" class="btn-social btn-outline" target="_blank"><span class="sr-only">Github</span><i class="fa fa-fw fa-github"></i></a>
-              </li>
-              <li>
-                <a href="https://www.behance.net/kayahellow1ce7" class="btn-social btn-outline" target="_blank"><span class="sr-only">Behance</span><i class="fa fa-fw fa-behance"></i></a>
-              </li>
-              <li>
-                <a href="https://dribbble.com/seil" class="btn-social btn-outline" target="_blank"><span class="sr-only">Dribble</span><i class="fa fa-fw fa-dribbble"></i></a>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="footer-below">
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-12">
-            &copy; Kayashima Yuki
-          </div>
-        </div>
-      </div>
-    </div>
-  </footer>
-
-  <!-- Scroll to Top Button (Only visible on small and extra-small screen sizes) -->
-  <div class="scroll-top page-scroll hidden-sm hidden-xs hidden-lg hidden-md">
-    <a class="btn btn-primary" href="#page-top">
-            <i class="fa fa-chevron-up"></i>
-        </a>
-  </div>
-
-  <!-- Portfolio Modals -->
-  <!-- gifto -->
-  <div class="portfolio-modal modal fade" id="portfolioModal1" tabindex="-1" role="dialog" aria-hidden="true">
-    <div class="modal-content">
-      <div class="close-modal" data-dismiss="modal">
-        <div class="lr">
-          <div class="rl">
-          </div>
-        </div>
-      </div>
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-8 col-lg-offset-2">
-            <div class="modal-body">
-              <h2>TECH LAUNCH AUDITION</h2>
-              <hr class="star-primary">
-              <img src="img/portfolio/gifto.jpg" class="img-responsive img-centered" alt="">
-              <p>大学に入学してすぐの2015年4月に<a href="https://life-is-tech.com/tla2015/" target="_blank">TECH LAUNCH AUDITION</a>というハッカソンにデザイナーとして参加した。「気軽に、150円 ~ 1200円ほどの商品と交換できるチケットを友達にプレゼントできたらいいな」というアイディアからプロジェクトを作成し、ファイナリストに選ばれた。最終的にはグッドデザイン賞を受賞することができた。</p>
-              <button id="btnSubmit" type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
+                <div class="portfolio-image-wrap">
+                  <img src="img/portfolio/thumb/disney.jpg" alt="" />
+                </div>
+                <div class="portfolio-caption-mask">
+                  <div class="portfolio-caption-text">
+                    <div class="portfolio-caption-tb-cell">
+                      <h5 class="alt-title">Simple Portfolio Title</h5>
+                      <p>Landscape</p>
+                    </div>
+                  </div>
+                </div>
+              </a>
             </div>
           </div>
-        </div>
-      </div>
-    </div>
-  </div>
 
-  <!-- fujiwara -->
-  <div class="portfolio-modal modal fade" id="portfolioModal2" tabindex="-1" role="dialog" aria-hidden="true">
-    <div class="modal-content">
-      <div class="close-modal" data-dismiss="modal">
-        <div class="lr">
-          <div class="rl">
+          <div class="portfolio-item internship">
+            <div class="portfolio-box">
+              <a class="porfolio-popup gallery-popup-link" href="img/portfolio/large/meet_large.jpg" title="Portfolio Image 02">
+                <div class="portfolio-image-wrap">
+                  <img src="img/portfolio/thumb/meet.jpg" alt="" />
+                </div>
+                <div class="portfolio-caption-mask">
+                  <div class="portfolio-caption-text">
+                    <div class="portfolio-caption-tb-cell">
+                      <h5 class="alt-title">Simple Portfolio Title</h5>
+                      <p>People</p>
+                    </div>
+                  </div>
+                </div>
+              </a>
+            </div>
           </div>
-        </div>
-      </div>
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-8 col-lg-offset-2">
-            <div class="modal-body">
-              <h2>初めてのアプリリリース</h2>
-              <hr class="star-primary">
-              <img src="img/portfolio/fujiwara.png" class="img-responsive img-centered" alt="">
-              <p>テレビを見ていた時、某俳優が出演している映画が流れていた。その時、通常は濁音がつかないひらがなに濁音をつけて、ツイートする友人が「てん」と入力した後、変換をすることで濁音をつけていたことを思い出し、その作業が面倒だろうと考えて製作したアプリ。<br>実装としては、入力された文字列を取得し、濁音のつくひらがなや、カタカナ、また漢字や記号以外の全てのひらがなとカタカナに、濁音をつけて出力してくれるよう実装した。リリースの経験をしておきたかった為、実装した後は<a href="https://play.google.com/store/apps/details?id=com.yk.tatsuya_conversion" target="_blank">ストア</a>にリリースした。</p>
-              <button id="btnSubmit" type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
+
+          <div class="portfolio-item internship">
+            <div class="portfolio-box">
+              <a class="porfolio-popup gallery-popup-link" href="img/portfolio/large/drift_large.jpg" title="Portfolio Image 03">
+                <div class="portfolio-image-wrap">
+                  <img src="img/portfolio/thumb/drift.jpg" alt="" />
+                </div>
+                <div class="portfolio-caption-mask">
+                  <div class="portfolio-caption-text">
+                    <div class="portfolio-caption-tb-cell">
+                      <h5 class="alt-title">Simple Portfolio Title</h5>
+                      <p>Cloud Hill</p>
+                    </div>
+                  </div>
+                </div>
+              </a>
+            </div>
+          </div>
+
+          <div class="portfolio-item internship">
+            <div class="portfolio-box">
+              <a class="porfolio-popup gallery-popup-link" href="img/portfolio/large/patience_large.jpg" title="Portfolio Image 04">
+                <div class="portfolio-image-wrap">
+                  <img src="img/portfolio/thumb/patience.jpg" alt="" />
+                </div>
+                <div class="portfolio-caption-mask">
+                  <div class="portfolio-caption-text">
+                    <div class="portfolio-caption-tb-cell">
+                      <h5 class="alt-title">Simple Portfolio Title</h5>
+                      <p>people</p>
+                    </div>
+                  </div>
+                </div>
+              </a>
+            </div>
+          </div>
+
+          <div class="portfolio-item internship">
+            <div class="portfolio-box">
+              <a class="porfolio-popup gallery-popup-link" href="img/portfolio/large/disguise_large.jpg" title="Portfolio Image 05">
+                <div class="portfolio-image-wrap">
+                  <img src="img/portfolio/thumb/disguise.jpg" alt="" />
+                </div>
+                <div class="portfolio-caption-mask">
+                  <div class="portfolio-caption-text">
+                    <div class="portfolio-caption-tb-cell">
+                      <h5 class="alt-title">Simple Portfolio Title</h5>
+                      <p>Landscape</p>
+                    </div>
+                  </div>
+                </div>
+              </a>
+            </div>
+          </div>
+
+          <div class="portfolio-item internship">
+            <div class="portfolio-box">
+              <a class="porfolio-popup gallery-popup-link" href="img/portfolio/large/blur_large.jpg" title="Portfolio Image 05">
+                <div class="portfolio-image-wrap">
+                  <img src="img/portfolio/thumb/blur.jpg" alt="" />
+                </div>
+                <div class="portfolio-caption-mask">
+                  <div class="portfolio-caption-text">
+                    <div class="portfolio-caption-tb-cell">
+                      <h5 class="alt-title">Simple Portfolio Title</h5>
+                      <p>People</p>
+                    </div>
+                  </div>
+                </div>
+              </a>
+            </div>
+          </div>
+
+          <div class="portfolio-item internship">
+            <div class="portfolio-box">
+              <a class="porfolio-popup gallery-popup-link" href="img/portfolio/large/drought_large.jpg" title="Portfolio Image 07">
+                <div class="portfolio-image-wrap">
+                  <img src="img/portfolio/thumb/drought.jpg" alt="" />
+                </div>
+                <div class="portfolio-caption-mask">
+                  <div class="portfolio-caption-text">
+                    <div class="portfolio-caption-tb-cell">
+                      <h5 class="alt-title">Simple Portfolio Title</h5>
+                      <p>Landscape</p>
+                    </div>
+                  </div>
+                </div>
+              </a>
+            </div>
+          </div>
+
+          <div class="portfolio-item branding">
+            <div class="portfolio-box">
+              <a class="porfolio-popup gallery-popup-link" href="img/portfolio/large/amitumi_chichibu_large.jpg" title="Portfolio Image 08">
+                <div class="portfolio-image-wrap">
+                  <img src="img/portfolio/thumb/amitumi_chichibu.jpg" alt="" />
+                </div>
+                <div class="portfolio-caption-mask">
+                  <div class="portfolio-caption-text">
+                    <div class="portfolio-caption-tb-cell">
+                      <h5 class="alt-title">Simple Portfolio Title</h5>
+                      <p>People</p>
+                    </div>
+                  </div>
+                </div>
+              </a>
+            </div>
+          </div>
+
+          <div class="portfolio-item branding">
+            <div class="portfolio-box">
+              <a class="porfolio-popup gallery-popup-link" href="img/portfolio/large/amitumi_large.jpg" title="Portfolio Image 09">
+                <div class="portfolio-image-wrap">
+                  <img src="img/portfolio/thumb/amitumi.jpg" alt="" />
+                </div>
+                <div class="portfolio-caption-mask">
+                  <div class="portfolio-caption-text">
+                    <div class="portfolio-caption-tb-cell">
+                      <h5 class="alt-title">Simple Portfolio Title</h5>
+                      <p>Cloud Hill</p>
+                    </div>
+                  </div>
+                </div>
+              </a>
+            </div>
+          </div>
+
+          <div class="portfolio-item hackathon">
+            <div class="portfolio-box">
+              <a class="porfolio-popup gallery-popup-link" href="img/portfolio/large/pixiv_large.jpg" title="Portfolio Image 09">
+                <div class="portfolio-image-wrap">
+                  <img src="img/portfolio/thumb/pixiv.jpg" alt="" />
+                </div>
+                <div class="portfolio-caption-mask">
+                  <div class="portfolio-caption-text">
+                    <div class="portfolio-caption-tb-cell">
+                      <h5 class="alt-title">Simple Portfolio Title</h5>
+                      <p>Cloud Hill</p>
+                    </div>
+                  </div>
+                </div>
+              </a>
+            </div>
+          </div>
+
+          <div class="portfolio-item hackathon">
+            <div class="portfolio-box">
+              <a class="porfolio-popup gallery-popup-link" href="img/portfolio/large/xmas_card_large.jpg" title="Portfolio Image 09">
+                <div class="portfolio-image-wrap">
+                  <img src="img/portfolio/thumb/xmas_card.jpg" alt="" />
+                </div>
+                <div class="portfolio-caption-mask">
+                  <div class="portfolio-caption-text">
+                    <div class="portfolio-caption-tb-cell">
+                      <h5 class="alt-title">Simple Portfolio Title</h5>
+                      <p>Cloud Hill</p>
+                    </div>
+                  </div>
+                </div>
+              </a>
+            </div>
+          </div>
+
+          <div class="portfolio-item released-app">
+            <div class="portfolio-box">
+              <a class="porfolio-popup gallery-popup-link" href="img/portfolio/large/timer_large.jpg" title="Portfolio Image 09">
+                <div class="portfolio-image-wrap">
+                  <img src="img/portfolio/thumb/timer.jpg" alt="" />
+                </div>
+                <div class="portfolio-caption-mask">
+                  <div class="portfolio-caption-text">
+                    <div class="portfolio-caption-tb-cell">
+                      <h5 class="alt-title">Simple Portfolio Title</h5>
+                      <p>Cloud Hill</p>
+                    </div>
+                  </div>
+                </div>
+              </a>
+            </div>
+          </div>
+
+
+          <div class="portfolio-item released-app">
+            <div class="portfolio-box">
+              <a class="porfolio-popup gallery-popup-link" href="img/portfolio/large/addition_large.jpg" title="Portfolio Image 09">
+                <div class="portfolio-image-wrap">
+                  <img src="img/portfolio/thumb/addition.jpg" alt="" />
+                </div>
+                <div class="portfolio-caption-mask">
+                  <div class="portfolio-caption-text">
+                    <div class="portfolio-caption-tb-cell">
+                      <h5 class="alt-title">Simple Portfolio Title</h5>
+                      <p>Cloud Hill</p>
+                    </div>
+                  </div>
+                </div>
+              </a>
+            </div>
+          </div>
+
+          <div class="portfolio-item released-app">
+            <div class="portfolio-box">
+              <a class="porfolio-popup gallery-popup-link" href="img/portfolio/large/fujitatsu_large.jpg" title="Portfolio Image 09">
+                <div class="portfolio-image-wrap">
+                  <img src="img/portfolio/thumb/fujitatsu.jpg" alt="" />
+                </div>
+                <div class="portfolio-caption-mask">
+                  <div class="portfolio-caption-text">
+                    <div class="portfolio-caption-tb-cell">
+                      <h5 class="alt-title">Simple Portfolio Title</h5>
+                      <p>Cloud Hill</p>
+                    </div>
+                  </div>
+                </div>
+              </a>
+            </div>
+          </div>
+
+          <div class="portfolio-item hackathon">
+            <div class="portfolio-box">
+              <a class="porfolio-popup gallery-popup-link" href="img/portfolio/large/gifto_large.jpg" title="Portfolio Image 09">
+                <div class="portfolio-image-wrap">
+                  <img src="img/portfolio/thumb/gifto.jpg" alt="" />
+                </div>
+                <div class="portfolio-caption-mask">
+                  <div class="portfolio-caption-text">
+                    <div class="portfolio-caption-tb-cell">
+                      <h5 class="alt-title">Simple Portfolio Title</h5>
+                      <p>Cloud Hill</p>
+                    </div>
+                  </div>
+                </div>
+              </a>
             </div>
           </div>
         </div>
-      </div>
-    </div>
-  </div>
 
-  <!-- addition -->
-  <div class="portfolio-modal modal fade" id="portfolioModal3" tabindex="-1" role="dialog" aria-hidden="true">
-    <div class="modal-content">
-      <div class="close-modal" data-dismiss="modal">
-        <div class="lr">
-          <div class="rl">
-          </div>
-        </div>
+      </div>
+    </section>
+
+    <hr />
+    <section id="experience" class="section-padding">
+      <div class="container text-center">
+        <h2 class="mb-60">Experience</h2>
       </div>
       <div class="container">
         <div class="row">
-          <div class="col-lg-8 col-lg-offset-2">
-            <div class="modal-body">
-              <h2>身近な問題解決のために作ったアプリ</h2>
-              <hr class="star-primary">
-              <img src="img/portfolio/addition.png" class="img-responsive img-centered" alt="">
-              <p>私には12歳下の妹がいる。当時、小学1年生になった妹が「ママが作る問題が同じものが多い」と文句を言っていたのでランダムで20問出題するアプリを製作した。結果発表の画面では正回数ごとにスタンプが変化するので、実際に妹にやってもらった時は、全問正解した時に表示される「大変よくできました」のスタンプを目指すように考えながら、アプリを利用してくれた。実際に利用してもらった後は、<a href="https://play.google.com/store/apps/details?id=yukikayashima.addition" target="_blank">ストア</a>にリリースした。</p>
-              <button id="btnSubmit" type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
+          <div class="col-md-6">
+            <div class="history-box mb-30">
+              <h6 class="alt-title history-year">2015 - 2018</h6>
+              <h4 class="alt-title history-title">android mentor - Life is Tech! Inc</h4>
+              <p class="lead history-content">メンターとして、主にAndroidアプリケーションの開発を中高生に教えるアルバイト。累計100人以上の中高生に教えた。</p>
+            </div>
+            <div class="history-box">
+              <h6 class="alt-title history-year">2016 - 2018</h6>
+              <h4 class="alt-title history-title">developer - Life is Tech! Inc</h4>
+              <p class="lead history-content">サービス開発インターンにて
+                <a href="https://www.technologia-schoolofmagic.jp/">テクノロジア魔法学校</a> の教材開発。</p>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="history-box mb-30">
+              <h6 class="alt-title history-year">2016 - 2017</h6>
+              <h4 class="alt-title history-title">designer - we+ Inc</h4>
+              <p class="lead history-content">約1年間ウィンドウの制作や、展示物の制作等に関わる。</p>
+            </div>
+            <div class="history-box">
+              <h6 class="alt-title history-year">2017</h6>
+              <h4 class="alt-title history-title">designer - Cookpad Inc</h4>
+              <p class="lead history-content">夏に開催された5日間のサービス開発インターン。本当に「このサービスは必要なのか？」「ニーズにあっているのか？」など意見にはっきりと答えられるよう、サービス開発のサイクルを回す実践的なインターンに参加。</p>
             </div>
           </div>
         </div>
       </div>
-    </div>
-  </div>
+    </section>
 
-  <!-- 残り時間 -->
-  <div class="portfolio-modal modal fade" id="portfolioModal4" tabindex="-1" role="dialog" aria-hidden="true">
-    <div class="modal-content">
-      <div class="close-modal" data-dismiss="modal">
-        <div class="lr">
-          <div class="rl">
-          </div>
-        </div>
-      </div>
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-8 col-lg-offset-2">
-            <div class="modal-body">
-              <h2>デザインを重視したアプリ開発</h2>
-              <hr class="star-primary">
-              <img src="img/portfolio/second.png" class="img-responsive img-centered" alt="">
-              <p>これは初めてデザインをメインに開発したAndroidアプリケーション。縦画面の時と横画面の時のレイアウトを別々に実装した。フォントを使い、より時計の雰囲気を出したことが一番のこだわりだ。実際にGoogle Play Storeに<a href="https://play.google.com/store/apps/details?id=ykayashima.second" target="_blank">リリース</a>している。</p>
-              <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
+    <footer id="footer" class="footer gray-bg">
+      <div class="container text-center">
+        <ul class="social mb-60 wow fadeInUp" data-wow-duration="1.5s">
+          <li>
+            <a target="_blank" href="https://www.facebook.com/y.kyashima">
+              <i class="fa fa-facebook"></i>
+            </a>
+          </li>
+          <li>
+            <a target="_blank" href="https://github.com/kaya-seil">
+              <i class="fa fa-github"></i>
+            </a>
+          </li>
+        </ul>
+        <p class="copyright">
+          <a class="copy-link scroll-top" href="">&copy; Yuki Kayashima</a>
+        </p>
 
-  <!-- Xmas -->
-  <div class="portfolio-modal modal fade" id="portfolioModal5" tabindex="-1" role="dialog" aria-hidden="true">
-    <div class="modal-content">
-      <div class="close-modal" data-dismiss="modal">
-        <div class="lr">
-          <div class="rl">
-          </div>
-        </div>
       </div>
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-8 col-lg-offset-2">
-            <div class="modal-body">
-              <h2>デザイナーズハッカソン</h2>
-              <hr class="star-primary">
-              <img src="img/portfolio/xmas01.jpeg" class="img-responsive img-centered" alt="">
-              <p>2016年の11月に<a href="http://for-creators.com/" target="_blank">Designers Hackathon</a>に参加した。賞品は貰えなかったものの、周りにプロのデザイナーがいる中、4位だった。このハッカソンに出て、よりデザインが好きになった。<a href="https://www.behance.net/gallery/45104915/Xmas-Card" target="_blank">Behance</a>にも作品をあげている。</p>
-              <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
+    </footer>
 
-  <!-- pixiv -->
-  <div class="portfolio-modal modal fade" id="portfolioModal6" tabindex="-1" role="dialog" aria-hidden="true">
-    <div class="modal-content">
-      <div class="close-modal" data-dismiss="modal">
-        <div class="lr">
-          <div class="rl">
-          </div>
-        </div>
-      </div>
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-8 col-lg-offset-2">
-            <div class="modal-body">
-              <h2>CODE HAMMER</h2>
-              <hr class="star-primary">
-              <img src="img/portfolio/pixiv01.jpg" class="img-responsive img-centered" alt="">
-              <p>2016年12月には<a href="http://code-hammer.tech-salon.com/" target="_blank">CODE HAMMER</a>というハッカソンにデザイナーとして参加した。2日間で一つのプロジェクトを作るハッカソンだったが、webとAndroidアプリケーションの2つを使用するアイディアにしてしまい、2つのアイディア出しと実装を行なった。ここでデザインにはスピードも重要なのだと感じることができた。この時Alfredの便利さに気づき、課金した。</p>
-              <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
   </div>
 
 
 
-  <!-- ami tumi -->
-  <div class="portfolio-modal modal fade" id="portfolioModal7" tabindex="-1" role="dialog" aria-hidden="true">
-    <div class="modal-content">
-      <div class="close-modal" data-dismiss="modal">
-        <div class="lr">
-          <div class="rl">
-          </div>
-        </div>
-      </div>
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-8 col-lg-offset-2">
-            <div class="modal-body">
-              <h2>ルームシューズ ブランド立ち上げ</h2>
-              <hr class="star-primary">
-              <img src="img/portfolio/amitumi.png" class="img-responsive img-centered" alt="">
-              <p>学生団体 適十塾のプロジェクトで「布わらじを日本で販売することで、バングラデシュの雇用創出と日本のわらじ文化再建」というアイディアのから、武蔵野美術大学やBRACの協力を得てルーヌシューズ布わらじの開発に成功。編み方を熟知した塾生がバングラデシュの人々に直接指導し、わらじの生産を開始した。<br><a href="http://tekitojuku.tumblr.com/" target="_blank">ami tumi</a>という名前のブランドを立ち上げ、実際に伊香保温泉の千明仁泉亭などの店舗で販売を行なっている。</p>
-              <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
 
-  <!-- ami tumi 秩父 -->
-  <div class="portfolio-modal modal fade" id="portfolioModal8" tabindex="-1" role="dialog" aria-hidden="true">
-    <div class="modal-content">
-      <div class="close-modal" data-dismiss="modal">
-        <div class="lr">
-          <div class="rl">
-          </div>
-        </div>
-      </div>
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-8 col-lg-offset-2">
-            <div class="modal-body">
-              <h2>秩父とコラボ</h2>
-              <hr class="star-primary">
-              <img src="img/portfolio/amitumi_chichibu.jpg" class="img-responsive img-centered" alt="">
-              <p>学生団体 適十塾のプロジェクトの<a href="http://tekitojuku.tumblr.com/" target="_blank">ami tumi</a>というブランドで秩父とコラボし、<a href="https://www.chichibu-omotenashi.com/lc/" target="_blank">LOVE CHICHIBU</a>という企画に参加した。秩父の新しい温泉施設である<a href="http://www.seibuchichibu-matsurinoyu.jp/matsuri/miyageichi/index.html"
-                  target="_blank">西武秩父駅前温泉 祭の湯</a>にてコラボ商品を販売している。</p>
-              <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
+  <script src="js/jquery-1.11.3.min.js" type="text/javascript"></script>
+  <script src="js/plugins/jquery.easing.js" type="text/javascript"></script>
+  <script src="js/plugins/SmoothScroll.js" type="text/javascript"></script>
+  <script src="js/plugins/owl.carousel.min.js" type="text/javascript"></script>
+  <script src="js/plugins/wow.min.js" type="text/javascript"></script>
+  <script src="js/plugins/isotope.pkgd.min.js" type="text/javascript"></script>
+  <script src="js/plugins/jquery.stellar.min.js" type="text/javascript"></script>
+  <script src="js/plugins/jquery.fitvids.js" type="text/javascript"></script>
+  <script src="js/plugins/jquery.magnific-popup.min.js" type="text/javascript"></script>
+  <script src="js/plugins/jquery.appear.js" type="text/javascript"></script>
+  <script src="js/plugins/jquery.countTo.js" type="text/javascript"></script>
+  <script src="js/plugins/jquery.mb.YTPlayer.min.js" type="text/javascript"></script>
+  <script src="js/plugins/jquery.simple-text-rotator.min.js" type="text/javascript"></script>
+  <script src="js/plugins/jquery.backstretch.js" type="text/javascript"></script>
+  <script src="js/plugins/jquery.singlePageNav.min.js" type="text/javascript"></script>
+  <script src="js/plugins/jquery.validate.min.js" type="text/javascript"></script>
+  <script src="js/theme.js" type="text/javascript"></script>
 
-  <!-- クックパッド -->
-  <div class="portfolio-modal modal fade" id="portfolioModal9" tabindex="-1" role="dialog" aria-hidden="true">
-    <div class="modal-content">
-      <div class="close-modal" data-dismiss="modal">
-        <div class="lr">
-          <div class="rl">
-          </div>
-        </div>
-      </div>
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-8 col-lg-offset-2">
-            <div class="modal-body">
-              <h2>クックパッド サマーインターン</h2>
-              <hr class="star-primary">
-              <img src="img/portfolio/meet02.png" class="img-responsive img-centered" alt="">
-              <p>2017年の5day サービス開発インターンシップで製作したアプリケーション。「一人暮らしの料理を楽しくするサービス」というテーマを元に、企画の面に力を入れて5日間で製作した。2人で1班だったのですが、私が参加した班は私を含めて誰も一人暮らしをしていなかったので、問題提起に苦しんだ。インターンが終わった後に、一人暮らしをしている友人の家に行き、夜中にインタビューを行い、完成させた。</p>
-              <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-
-
-  <!-- jQuery -->
-  <script src="vendor/jquery/jquery.min.js"></script>
-
-  <!-- Bootstrap Core JavaScript -->
-  <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
-
-  <!-- Plugin JavaScript -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
-
-  <!-- Contact Form JavaScript -->
-  <script src="js/jqBootstrapValidation.js"></script>
-
-  <!-- Theme JavaScript -->
-  <script src="js/freelancer.min.js"></script>
 
 </body>
+<script language="javascript" type="text/javascript" src="hero/sketch.js"></script>
 
 </html>
