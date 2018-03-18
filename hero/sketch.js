@@ -1,44 +1,37 @@
-var size;
-
+var teapot;
 var soundFile;
-var amplitude;
-
-var smoothing = 1;
-
-var heart;
-var heartImage;
 
 function preload() {
+  teapot = loadModel('hero/Heart_.obj');
   soundFile = loadSound('hero/heart.mp3');
-  heartImage = loadImage('hero/heart.png');
 }
 
 function setup() {
-  var canvas = createCanvas(windowWidth, windowHeight);
+  var canvas = createCanvas(windowWidth, windowHeight, WEBGL);
   canvas.parent("intro");
-  noStroke();
-  fill(255);
-
-  soundFile.loop();
 
   amplitude = new p5.Amplitude();
 
-  imageMode(CENTER);
+  soundFile.loop();
+  soundFile.setVolume(0.4);
 }
 
 function draw() {
-  background('#FFFFFF');
+
+  orbitControl();
+  background("#f6f6f6");
+  amplitude.smooth(0.9);
 
   var volume = amplitude.getLevel();
-  size = map(volume + 0.5, 0, 1.0, 25, 400) + 100;
-  if (mouseIsPressed) {
-    image(heartImage, mouseX, mouseY, size, size);
-  } else {
-    image(heartImage, width / 2, height / 2, size, size);
-  }
+  size = map(volume + 0.5, 0, 1.0, 25, 50);
 
+  rotateX(3.1);
 
-  amplitude.smooth(0.9);
+  if (!mouseIsPressed)
+    rotateY(frameCount * 0.01);
+
+  scale(size);
+  model(teapot);
 
   if (mouseY > height && soundFile.isPlaying()) {
     soundFile.pause();
