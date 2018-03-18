@@ -2378,7 +2378,7 @@ header.header-dark .nav-bar-icon>span::after,
 header.header-dark.header-prepare .nav-bar-icon>span,
 header.header-dark.header-prepare .nav-bar-icon>span:before,
 header.header-dark.header-prepare .nav-bar-icon>span::after {
-    background-color: #503830;
+    background-color: #ffffff;
 }
 
 header.header-light .nav-bar-icon>span,
