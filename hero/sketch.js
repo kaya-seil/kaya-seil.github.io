@@ -31,18 +31,19 @@ function draw() {
 
   var volume = amplitude.getLevel();
   size = map(volume + 0.5, 0, 1.0, 25, 400) + 100;
-  image(heartImage, width / 2, height / 2, size, size);
+  if (mouseIsPressed) {
+    image(heartImage, mouseX, mouseY, size, size);
+  } else {
+    image(heartImage, width / 2, height / 2, size, size);
+  }
+
 
   amplitude.smooth(0.9);
-}
 
-function keyPressed(e) {
-  if (e.keyCode == 32) {
-    if (soundFile.isPlaying()) {
-      soundFile.pause();
-    } else {
-      soundFile.play();
-    }
+  if (mouseY > height && soundFile.isPlaying()) {
+    soundFile.pause();
+  } else if (mouseY < height && soundFile.isPaused()) {
+    soundFile.play();
   }
 }
 
