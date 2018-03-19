@@ -14,6 +14,7 @@ function setup() {
 
   soundFile.loop();
   soundFile.setVolume(0.4);
+  strokeWeight(0.7);
 }
 
 function draw() {
